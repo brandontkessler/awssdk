@@ -13,7 +13,7 @@ import json
 with open('../bcreds.json') as f:
     crd = json.load(f)['redshift']
 
-db = Postgres(crd['database'], 
+db = Redshift(crd['database'], 
                 crd['ip'], 
                 crd['port'], 
                 crd['username'], 
